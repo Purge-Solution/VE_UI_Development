@@ -4,6 +4,8 @@
 
 import { Component, ViewChild } from '@angular/core';
 import { NavbarModule, WavesModule, ButtonsModule, NavbarComponent } from 'angular-bootstrap-md'
+import {MatDialog} from '@angular/material/dialog';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-root',
@@ -13,4 +15,10 @@ import { NavbarModule, WavesModule, ButtonsModule, NavbarComponent } from 'angul
 export class AppComponent {
   title = 'VEConnect';
   @ViewChild('navbar', { static: true }) navbar: NavbarComponent
+
+constructor(public dialog: MatDialog) { }
+  
+openDialog(){
+  this.dialog.open(LoginComponent);
+}
 }

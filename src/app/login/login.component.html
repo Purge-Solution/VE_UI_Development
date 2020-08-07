@@ -1,0 +1,40 @@
+<div class="medium-list" >
+    <div class="list-viewer-wrapper">
+      <div class="list-header-title">Login</div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && onLoginSubmit()" novalidate>
+            <div class="form-container">
+                     <mat-form-field>
+                            <input id="email"
+                                matInput
+                                formControlName="email" required placeholder="Ex. pat@example.com"
+                                [(ngModel)]="user.email">
+                                <mat-label>Enter your email</mat-label>
+                                <mat-icon matSuffix>email</mat-icon>
+                     </mat-form-field>
+                     
+
+                     <mat-form-field>
+                             <input id="password" 
+                              matInput 
+                              formControlName="password" required
+                              [(ngModel)]="user.password"
+                              placeholder="Enter your password"
+                              [type]="hide ? 'password' : 'text'">
+                              <mat-icon matSuffix>vpn_key</mat-icon>
+                    </mat-form-field>
+
+                    <a routerLink="/forgotpassword" (click)="openDialog()">Forgot Password</a>
+                   
+                    <section class="example-section">
+                        <mat-checkbox class="example-margin">Remember Me!</mat-checkbox>
+                      </section>
+                                                             
+                        <button mat-button type="submit" class="mat-raised-button mat-primary" [disabled]="!loginForm.valid">Sign In</button>
+                        <button mat-button routerLink="/login" class="divider">Cancal</button>
+                        
+                    </div>                             
+                </form>
+            </div>
+        </div>
+                

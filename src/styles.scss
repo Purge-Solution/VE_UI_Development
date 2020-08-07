@@ -1,35 +1,137 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-body {
-  font-family: Roboto, Arial, sans-serif;
-  margin: 0;
-}
+  body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 .basic-container {
   padding: 30px;
 }
+
 .version-info {
   font-size: 8pt;
   float: right;
   margin: 8px;
 }
+
+.spacer {
+  flex-grow: 4;
+}
+
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-body {
-  font-family: Roboto, Arial, sans-serif;
-  margin: 0;
-}
+html, body { height: 80%; }
+   body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
 .basic-container {
   padding: 30px;
 }
+
 .version-info {
   font-size: 8pt;
   float: right;
   margin: 8px;
 }
-.mainAppContainer{
-  background:url(assets/images/singhgad_fort_1.jpg);
+
+.navbar-inner {
+  background-color:transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  transition: all ease .85px;
+  z-index: 100;
+  width: 100px;
+}
+
+.mainAppContainer {
+  background:url(assets/banner/home-banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100%;
-  height: 600px;
+  height: 650px;
+}
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+    margin: 0;
+
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.medium-list {
+    margin: auto;
+    width: 450px;
+    padding: 0px;
+}
+
+.list-viewer-wrapper {
+    border: 10px solid rgba(48, 2, 109, 0.05);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, .24), 0 0 20px rgba(0, 0, 0, .17);
+    margin: 5px;
+}
+
+.list-header-title {
+    color: rgba(0,0,0,.87);
+    background: rgba(6, 1, 39, 0.03);
+    background-color: cadetblue;
+    padding: 9px 24px;
+    font-weight: bolder;
+    
+}
+.mat-input-element {
+  caret-color: transparent;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 15px;
+    padding-bottom: 16px;
+  }
+
+  .mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+    background-color: cadetblue;
+  }
+  
+  .example-form {
+  min-width: 150px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+mat-form-field {
+    margin-right: 16px;
+  }
+
+.divider {
+    margin-top: 5px !important;
+}
+
+.mat-dialog-container {
+  box-shadow: 0px 18px 20px -9px rgba(0, 0, 0, 0.5), 0px 30px 40px 5px rgba(0, 0, 0, 0.20), 0px 11px 50px 10px rgba(0, 0, 0, 0.17);
+  background: rgb(255, 255, 255);
+  color: rgba(0,0,0,.89);
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.carousel-indicators {
+  display: none;
 }
