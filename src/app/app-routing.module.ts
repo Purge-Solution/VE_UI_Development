@@ -16,8 +16,6 @@ import { LogoutComponent } from './logout/logout.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
-
-
 const routes: Routes = [
 
   {
@@ -30,21 +28,11 @@ const routes: Routes = [
     path: 'aboutus',
     component: AboutusComponent,
   },
-  
+
   {
-  path: 'register',
-  component: RegisterComponent,
-},
-
-{
-  path: 'login',        
-  component: LoginComponent,
-},
-
-{
-  path: 'forgotpassword',
-  component: ForgotpasswordComponent,
-},
+    path: 'register',
+    component: RegisterComponent,
+  },
 
 {
   path: 'event',
@@ -57,7 +45,7 @@ const routes: Routes = [
 },
 
 {
-  path: 'contactus',
+  path: 'contact us',
   component: ContactusComponent,
 },
 

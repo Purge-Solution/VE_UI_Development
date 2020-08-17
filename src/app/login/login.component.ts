@@ -27,13 +27,13 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private router: Router,
     public dialog: MatDialog,
-
     ) { }
+
 
     openDialog() {
       this.dialog.open(ForgotpasswordComponent);
     }
-
+    
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       'email': [this.user.email,[
