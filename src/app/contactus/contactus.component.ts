@@ -9,10 +9,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./contactus.component.scss']
 })
 export class ContactusComponent implements OnInit {
- 
+
+
   constructor() { }
 
   ngOnInit(): void {
-  }
-
+  } 
 }

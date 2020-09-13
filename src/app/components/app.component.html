@@ -4,7 +4,10 @@
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
   </button>
  
-  <span>VE-Connect</span>
+  <span></span>
+  <button mat-button >VE-Connect</button>
+  
+
   <span class="spacer"></span>
   <button mat-button routerLink="/home">Home</button>
 
@@ -12,7 +15,7 @@
 
   <button mat-button routerLink="/register">Register</button>
 
-  <button mat-button (click)="openDialog()">Login</button>
+  <button mat-button routerLink="/login">Login</button>
 
   <button mat-button routerLink="/contact us">Contact Us</button>
 
@@ -22,5 +25,4 @@
 <main class="mainAppContainer">
   <router-outlet></router-outlet>
 </main>
-
 

@@ -19,9 +19,9 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
 const routes: Routes = [
 
   {
-    path: 'home',
-    component: HomeComponent,
-    pathMatch: 'full'
+    path: '',
+    pathMatch: 'full',
+    component: HomeComponent
   },
 
   {
@@ -30,10 +30,15 @@ const routes: Routes = [
   },
 
   {
+    path: 'login',
+    component: LoginComponent,
+  },
+
+  {
     path: 'register',
     component: RegisterComponent,
   },
-
+  
 {
   path: 'event',
   component: EventComponent,
