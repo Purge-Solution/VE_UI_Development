@@ -15,12 +15,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
+
 import { GalleryComponent } from './gallery/gallery.component';
 import { EventComponent } from './event/event.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { LogoutComponent } from './logout/logout.component';
 import { MatDialogModule } from '@angular/material/dialog';
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { PopoverModule } from "ngx-smart-popover";
 import { FormsModule } from '@angular/forms';
@@ -29,11 +31,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field'; 
+
 import { MatRadioModule } from '@angular/material/radio'; 
 import { MatDatepickerModule } from '@angular/material/datepicker'; 
-import {MatCheckboxModule} from '@angular/material/checkbox'; 
-import {TextFieldModule} from '@angular/cdk/text-field';
+import { MatCheckboxModule } from '@angular/material/checkbox'; 
+import { TextFieldModule } from '@angular/cdk/text-field';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component'; 
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthguardService } from './service/authguard.service';
+import { LoginService } from './service/login.service';
+
 
 
 @NgModule({
@@ -47,7 +54,8 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
     ContactusComponent,
     AboutusComponent,
     LogoutComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +77,7 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
     MatCheckboxModule,
     TextFieldModule
   ],
-  providers: [],
+  providers: [LoginService, AuthguardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

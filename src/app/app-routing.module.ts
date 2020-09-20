@@ -15,6 +15,8 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { LogoutComponent } from './logout/logout.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthguardService } from './service/authguard.service';
 
 const routes: Routes = [
 
@@ -58,6 +60,12 @@ const routes: Routes = [
   path: 'logout',
   component: LogoutComponent,
 },
+
+{
+  path: 'dashboard',
+  component: DashboardComponent,
+  canActivate: [AuthguardService]
+}
 
 ];
 

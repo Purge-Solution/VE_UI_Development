@@ -1,1 +1,44 @@
-<p>dashboard works!</p>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+     
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    </button>
+   
+    <span></span>
+    <button mat-button >VE-Connect</button>
+  
+    <span class="spacer"></span>
+    <button mat-button routerLink="/dashboard">DashBoard</button>
+  
+    <button mat-button routerLink="/gallery">Gallery</button>
+      
+    <button mat-button routerLink="/event">Event</button>
+
+    <button mat-button routerLink="/logout">Logout</button>
+
+  
+  </mat-toolbar-row>
+  </mat-toolbar>
+  
+  <main class="mainAppContainer">
+    <router-outlet></router-outlet>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

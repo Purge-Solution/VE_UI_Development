@@ -9,6 +9,11 @@ import { Observable } from 'rxjs';
 export class AuthService {
   authenticateUser: any;
   registerUser: any;
+  isLoggedIn: any;
+  checkAuthenticated: any;
+  isAuthenticated: any;
 
   constructor() { }
 }
+
+

@@ -30,8 +30,6 @@ export class ForgotpasswordComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
   ) { }
 
-  
-  
   ngOnInit(): void {
     this.forgotpasswordForm = this.formBuilder.group({
       'email': [this.user.email,[

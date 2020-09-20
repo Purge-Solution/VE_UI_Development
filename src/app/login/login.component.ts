@@ -4,10 +4,12 @@ import { FormControl, Validators } from '@angular/forms';
 import { MatFormFieldControl} from '@angular/material/form-field'; 
 import { MatInputModule } from '@angular/material/input'; 
 import { Router } from '@angular/router';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
+import { AuthguardService } from '../service/authguard.service';
 import { AuthService } from '../service/auth.service';
 import { LoginModel } from 'src/models/login.model';
 import { ForgotpasswordComponent } from '../forgotpassword/forgotpassword.component';
+import { ConfigurationService } from '../service/configuration.service';
 
 
 @Component({
@@ -42,8 +44,8 @@ export class LoginComponent implements OnInit {
       ]],
       'password': [this.user.password,[
         Validators.required,
-        Validators.minLength(6),
-        Validators.maxLength(30)
+        Validators.minLength(8),
+        Validators.maxLength(16)
       ]],
           
     })
@@ -54,7 +56,7 @@ export class LoginComponent implements OnInit {
   this.authService.authenticateUser(this.user)
   .subscribe(data => {
     if (data.success) {
-    this.router.navigate(['/register']);
+    this.router.navigate(['/dashboard']);
      } else {
        console.log('Failed');
     }
