@@ -1,0 +1,76 @@
+// <copyright name="Purge Solution">
+//   Copyright 2020 Purge Solution. All Right Reserved.
+// </copyright>
+
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import {MatSelectModule} from '@angular/material/select';
+import { HomeComponent } from './home/home.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { EventComponent } from './event/event.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { LogoutComponent } from './logout/logout.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthguardService } from './service/authguard.service';
+
+const routes: Routes = [
+
+  {
+    path: '',
+    pathMatch: 'full',
+    component: HomeComponent
+  },
+
+  {
+    path: 'aboutus',
+    component: AboutusComponent,
+  },
+
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+
+  {
+    path: 'register',
+    component: RegisterComponent,
+  },
+  
+{
+  path: 'event',
+  component: EventComponent,
+},
+
+{
+  path: 'gallery',
+  component: GalleryComponent,
+},
+
+{
+  path: 'contact us',
+  component: ContactusComponent,
+},
+
+{
+  path: 'logout',
+  component: LogoutComponent,
+},
+
+{
+  path: 'dashboard',
+  component: DashboardComponent,
+  canActivate: [AuthguardService]
+}
+
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
